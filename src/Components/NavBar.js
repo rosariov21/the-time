@@ -2,7 +2,9 @@
 import React from 'react';
 import App from '../App.css'
 import Home from './Home'
-import InterviewDirectory from './InterviewDirectory'
+
+import MostReadInterviews from './MostReadInterviews'
+import WorldGuid from './WorldGuid';
 
 
 
@@ -12,6 +14,7 @@ Link,
 Route
 } from "react-router-dom"
 
+
 class NavBar extends React.Component{
     render(){
         return(
@@ -20,12 +23,16 @@ class NavBar extends React.Component{
                 
                         <ul className = "nav_ul">
                         <li className="list_item"><Link to = '/Home'>Home</Link></li>
-                        <li className="list_item"><Link to = '/interviewDirectory'>Interview Directory</Link></li>
+                       
+                        <li className="list_item"><Link to = '/MostReadInterviews'>MostReadInterviews</Link></li>
+                        <li className="list_item"><Link to = '/WorldGuid'>WorldGuid</Link></li>
                         </ul>
                   
                     <Switch>
                         <Route exact path = '/Home' component={Home}/>
-                        <Route path ='/interviewDirectory' component={InterviewDirectory}/>
+                        <Route path ='/MostReadInterviews' component={MostReadInterviews}/>
+                        <Route path ='/WorldGuid' component={WorldGuid}/>
+
                     </Switch>
                 </div>
             </Router>
